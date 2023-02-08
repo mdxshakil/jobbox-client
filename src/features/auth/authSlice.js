@@ -31,7 +31,7 @@ export const logoutUser = createAsyncThunk('auth/logoutUser', async () => {
     await signOut(auth)
 })
 export const getUser = createAsyncThunk('auth/getUSer', async (email) => {
-    const res = await fetch(`https://jobbox-server-beta.vercel.app/user/${email}`)
+    const res = await fetch(`https://jobbox-server-kappa.vercel.app/user/${email}`)
     const data = await res.json();
     if (data.status) {
         return data;
